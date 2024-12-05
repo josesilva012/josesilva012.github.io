@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebFinances</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>WebFinances</h1>
+        <div id="summary">
+            <p>Total Receitas: <span id="total-receitas">R$ 0,00</span></p>
+            <p>Total Despesas: <span id="total-despesas">R$ 0,00</span></p>
+            <p>Saldo Final: <span id="saldo-final">R$ 0,00</span></p>
+        </div>
+    </header>
+    <main>
+        <section id="form-section">
+            <h2>Cadastrar Transação</h2>
+            <form id="finance-form">
+                <input type="text" id="descricao" placeholder="Descrição" required>
+                <select id="categoria" required>
+                    <option value="" disabled selected>Categoria</option>
+                    <option value="Receitas">Receitas</option>
+                    <option value="Despesas">Despesas</option>
+                </select>
+                <input type="date" id="data" required>
+                <input type="number" id="valor" placeholder="Valor" step="0.01" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+        <section id="list-section">
+            <h2>Transações</h2>
+            </td>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list">
+                    <!-- Linhas geradas dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
